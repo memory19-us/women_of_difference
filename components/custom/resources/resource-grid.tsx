@@ -61,7 +61,7 @@ const books = [
   },
 
   {
-    title: "On the Journey of Faith",
+    title: "On the Journey of Faith - Paperback",
     author: "Memory Grace Hector",
     description:
       "Steps to deepen your walk with God and navigate spiritual seasons with confidence and grace.",
