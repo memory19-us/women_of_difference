@@ -153,38 +153,68 @@ const books = [
       <div className="space-y-6 text-gray-700 leading-relaxed">
 
         <p className="font-semibold">
-          This hardcover edition preserves the weight and intention of the message.
+          On the Journey of Faith is more than a story.
         </p>
 
         <p>
-          On the Journey of Faith remains a sober, forward-looking reflection on obedience,
-          endurance, and faith formed away from public applause.
+          It is a steady, uncompromising reflection on what it truly means to walk with God
+          when certainty is absent and obedience carries a cost.
         </p>
 
         <p className="italic">
-          Faith here is not emotional escape.<br />
-          It is disciplined alignment.
+          This is not faith as performance.<br />
+          It is faith as discipline formed through doubt, loss, surrender, and restoration.
         </p>
 
         <p>
-          Designed for readers who value permanence, legacy, and reflection, this edition
-          serves as a companion for long seasons of growth and examination.
+          Drawing from the lived journey of <strong>Memory Grace Hector</strong>, the book traces
+          seasons where God called her to serve orphans and vulnerable children — not from
+          visibility, but from hidden obedience.
+        </p>
+
+        <p>
+          The narrative honors the old paths: faith built quietly, character forged in hardship,
+          and purpose revealed through surrender rather than spectacle.
         </p>
 
         <div>
           <h4 className="text-lg font-bold text-gray-900 mb-3">
-            Ideal For:
+            What This Book Delivers
           </h4>
           <ul className="space-y-2 list-disc pl-5">
-            <li>Leaders stewarding responsibility</li>
-            <li>Builders shaping long-term vision</li>
-            <li>Readers returning to foundational truths</li>
-            <li>Homes, libraries, and mentorship spaces</li>
+            <li>
+              <strong>Clarity through trial</strong> — Faith refined under pressure, not theory.
+            </li>
+            <li>
+              <strong>Order before increase</strong> — Spirit, mind, and character before expansion.
+            </li>
+            <li>
+              <strong>Ownership over emotion</strong> — Healing as responsibility, not entitlement.
+            </li>
+            <li>
+              <strong>Enduring hope</strong> — God’s faithfulness revealed through ordinary obedience.
+            </li>
           </ul>
         </div>
 
+        <div>
+          <h4 className="text-lg font-bold text-gray-900 mb-3">
+            Who This Book Serves
+          </h4>
+          <ul className="space-y-2 list-disc pl-5">
+            <li>Leaders seeking alignment over applause</li>
+            <li>Individuals questioning whether life will ever make sense</li>
+            <li>Readers weary of surface-level inspiration</li>
+            <li>Builders committed to depth, legacy, and integrity</li>
+          </ul>
+        </div>
+
+        <p className="font-medium">
+          This work stands on proven ground — rooted, sober-minded, and forward-looking.
+        </p>
+
         <p className="font-semibold text-gray-900">
-          Faith that is ordered lasts. Faith that is stewarded leads.
+          Faith, when stewarded well, outlasts the storm and leads the way.
         </p>
 
       </div>
