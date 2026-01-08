@@ -16,7 +16,7 @@ const Footer = () => {
               Woman of <span className="text-[#F5A623]">Difference</span>
             </h3>
             <p className="text-white/80 leading-relaxed">
-              Empowering women through mindset transformation, creating lasting change 
+              Equipping individuals to make a difference, creating lasting change 
               that transforms lives and communities.
             </p>
           </div>

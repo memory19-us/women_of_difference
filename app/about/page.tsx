@@ -16,10 +16,18 @@ export default function About() {
       {/* Intro / Mission */}
       <div className="max-w-5xl mx-auto px-4 -mt-16 relative z-10 mb-16">
         <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg text-center border border-gray-100">
-          <h2 className="text-2xl md:text-3xl font-bold text-teal-600 mb-4 font-serif">Our Mission</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-teal-600 mb-4 font-serif">Our Mission Statement</h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            At Woman of Difference Group, we help individuals live, lead, heal, and build from depth—where faith, identity, and discipline are rightly ordered before expansion begins.
-          </p>
+          To deliver high-quality services that restore order, dignity, and confidence while empowering individuals and communities to live aligned, purposeful lives. </p>
+        </div>
+      </div>
+
+
+      <div className="max-w-5xl mx-auto px-4 mt-16 relative z-10 mb-16">
+        <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg text-center border border-gray-100">
+          <h2 className="text-2xl md:text-3xl font-bold text-teal-600 mb-4 font-serif">Our Vision Statement</h2>
+          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          To build a trusted service brand known for excellence, integrity, and compassionate leadership, creating measurable impact while maintaining operational discipline.  </p>
         </div>
       </div>
 
