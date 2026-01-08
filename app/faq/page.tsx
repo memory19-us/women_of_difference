@@ -30,12 +30,12 @@ const faqs = [
   {
     question: "What is the ROOTS Framework?",
     answer:
-      "The ROOTS Framework emerged from lived experience. Grace discovered that burnout, confusion, and inconsistency are rarely random they are rooted. ROOTS focuses on faith, identity, responsibility, and order, teaching individuals and organizations to build depth before growth and alignment before expansion. It is about lasting transformation, not surface change."
+      "The ROOTS Framework emerged from lived experience. Grace discovered that inner wounds,burnout, confusion, and inconsistency are rarely random they are rooted. ROOTS focuses on faith, identity, responsibility, and order, teaching individuals and organizations to build depth before growth and alignment before expansion. It is about lasting transformation, not surface change."
   },
   {
     question: "Is this work faith-based?",
     answer:
-      "Yes unapologetically. Faith here is not an accessory or a slogan. It is treated as infrastructure. Scripture guides mindset, leadership, decision-making, and service. Faith is lived, ordered, and practiced daily."
+      "Yes, unapologetically. Faith here is not an accessory or a slogan. It is treated as infrastructure. Scripture guides mindset, leadership, decision-making, and service. Faith is lived, ordered, and practiced daily."
   },
   {
     question: "Who is this work for?",

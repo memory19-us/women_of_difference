@@ -2,6 +2,7 @@ import Footer from "@/components/custom/common/footer";
 import Navigation from "@/components/custom/common/navigation";
 import ContactForm from "@/components/custom/contact/form";
 import Hero from "@/components/custom/contact/hero";
+import { Linkedin, Facebook, Youtube } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -18,9 +19,42 @@ export default function Contact() {
           <div className="space-y-12">
             <div>
               <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Get in Touch</h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Whether you have questions about the ROOTS Framework, want to book a coaching session, or simply want to say hello, we would love to hear from you.
-              </p>
+              <div className="text-gray-600 text-lg leading-relaxed space-y-4">
+                <p>
+                  Whether you have questions about the ROOTS Framework,<br />
+                  are seeking professional support to organize and clean your space,<br />
+                  wish to book a coaching session,<br />
+                  or simply want to connect and say hello<br />
+                  we would be pleased to hear from you.
+                </p>
+
+                <p>
+                  At our core, we value clarity, order, and intentional engagement.
+                </p>
+
+                <div>
+                  <p className="mb-2">Every inquiry is an opportunity to:</p>
+                  <ul className="list-disc list-inside space-y-1 ml-2">
+                    <li>Serve with excellence</li>
+                    <li>Respond with care</li>
+                    <li>Create alignment.</li>
+                  </ul>
+                </div>
+
+                <p>
+                  We welcome the conversation<br />
+                  and look forward to engaging with you<br />
+                  in a meaningful and purposeful way.
+                </p>
+
+                <p>
+                  Please reach out at your convenience.
+                </p>
+
+                <p>
+                  We are ready to support your next step.
+                </p>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -52,13 +86,33 @@ export default function Contact() {
               <div className="pt-4">
                 <h3 className="font-bold text-gray-900 mb-3">Follow Us</h3>
                 <div className="flex gap-4">
-                  {['Facebook', 'Instagram', 'LinkedIn'].map((social) => (
-                    <a key={social} href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#3FA3A3] hover:text-white hover:border-[#3FA3A3] transition-all">
-                      <span className="sr-only">{social}</span>
-                      {/* Simple circle placeholders for icons */}
-                      <div className="w-2 h-2 rounded-full bg-current" />
-                    </a>
-                  ))}
+                  <a 
+                    href="https://www.linkedin.com/in/meshagrace12345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#0077B5] hover:text-white hover:border-[#0077B5] transition-all"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://www.facebook.com/share/p/181LGvcv8F/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://youtube.com/@womanofdifference?si=wgYPdXSFyWCwbamF" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#FF0000] hover:text-white hover:border-[#FF0000] transition-all"
+                    aria-label="YouTube"
+                  >
+                    <Youtube className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
             </div>
