@@ -1,31 +1,31 @@
 const RootsFramework = () => {
-  const framework = [
-    {
-      letter: "R",
-      title: "Recognize",
-      description: "Identify limiting beliefs and patterns that hold you back from reaching your full potential.",
-    },
-    {
-      letter: "O",
-      title: "Own",
-      description: "Take responsibility for your thoughts, actions, and the direction of your life journey.",
-    },
-    {
-      letter: "O",
-      title: "Overcome",
-      description: "Develop strategies and tools to break through barriers and overcome challenges.",
-    },
-    {
-      letter: "T",
-      title: "Transform",
-      description: "Implement new empowering beliefs and behaviors that align with your true potential.",
-    },
-    {
-      letter: "S",
-      title: "Sustain",
-      description: "Create lasting change through consistent practice and ongoing support systems.",
-    },
-  ];
+  const framework =  [
+  {
+    letter: "R",
+    title: "Release",
+    description: "Transformation begins with release. Let go of old narratives, misaligned expectations, fear-driven decisions, and unhealed patterns.",
+  },
+  {
+    letter: "O",
+    title: "Own",
+    description: "Ownership is the cornerstone of mature leadership. Take responsibility for your choices, mindset, calling, and growth.",
+  },
+  {
+    letter: "O",
+    title: "Order",
+    description: "Before expansion, there must be order: priorities, habits, boundaries, and systems aligned with your vision.",
+  },
+  {
+    letter: "T",
+    title: "Thrive",
+    description: "Thriving is fruitfulness rooted in stability, depth, strategic focus, and confidence grounded in identity.",
+  },
+  {
+    letter: "S",
+    title: "Step",
+    description: "Step is where clarity becomes action—intentional, measured steps toward purpose-driven outcomes.",
+  },
+];
 
   return (
     <section id="roots" className="py-24 bg-gradient-to-r from-[#3FA3A3] to-[#F5A623] relative overflow-hidden">

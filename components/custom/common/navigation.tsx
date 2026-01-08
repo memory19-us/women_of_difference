@@ -2,11 +2,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const router = useRouter()
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -15,29 +18,27 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setIsMobileMenuOpen(false);
-  };
 
   const navLinks = [
     { label: "Home", id: "home" , path:"/"},
     { label: "About", id: "about", path:"/about" },
     { label: "Services", id: "services", path:"/services" },
-    { label: "R.O.O.T.S Framework", id: "roots", path:"/roots" },
+    { label: "Our Ministries", id: "roots", path:"/ministries" },
+    { label: "Resources", id: "roots", path:"/resources" },
+    { label: "FAQ", id: "roots", path:"/faq" },
     { label: "Contact", id: "contact", path:"/contact" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-4" : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-8  ${
+        isScrolled ? "bg-white/30 backdrop-blur-sm shadow-md  rounded-b-2xl" : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <button
-            onClick={() => scrollToSection("home")}
+            onClick={() => router.push("/")}
             className={`text-2xl font-bold transition-colors ${
               isScrolled ? "text-[#3FA3A3]" : "text-white"
             }`}
@@ -48,15 +49,16 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
+              <Link
+              href={link.path}
+                key={link.path}
+                // onClick={() => router.push(link.path)}
                 className={`transition-colors hover:text-[#F5A623] ${
-                  isScrolled ? "text-foreground" : "text-white"
+                  isScrolled ? "text-black" : "text-white"
                 }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -81,7 +83,7 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => router.push(link.path)}
                 className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted transition-colors"
               >
                 {link.label}

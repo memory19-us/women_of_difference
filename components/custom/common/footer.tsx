@@ -1,7 +1,11 @@
 "use client"
 
+import { useRouter } from "next/navigation";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const router = useRouter()
 
   return (
     <footer className="bg-[#3FA3A3] text-white py-12">
@@ -22,7 +26,7 @@ const Footer = () => {
             <ul className="space-y-2 text-white/80">
               <li>
                 <button 
-                  onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => router.push("/about")}
                   className="hover:text-[#F5A623] transition-colors"
                 >
                   About Us
@@ -30,7 +34,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => router.push("/services")}
                   className="hover:text-[#F5A623] transition-colors"
                 >
                   Our Services
@@ -38,15 +42,24 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById("roots")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => router.push("/ministries")}
                   className="hover:text-[#F5A623] transition-colors"
                 >
-                  R.O.O.T.S Framework
+                 Our Ministries
+                </button>
+              </li>
+               <li>
+                <button 
+                  onClick={() => router.push("/resources")}
+                  className="hover:text-[#F5A623] transition-colors"
+                >
+                 Resources
                 </button>
               </li>
               <li>
+                
                 <button 
-                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => router.push("/contact")}
                   className="hover:text-[#F5A623] transition-colors"
                 >
                   Contact
@@ -60,7 +73,7 @@ const Footer = () => {
             <p className="text-white/80 mb-4">
               Join our community and stay updated on upcoming events and empowerment opportunities.
             </p>
-            <p className="text-white/80">info@womanofdifference.com</p>
+            <p className="text-white/80">info@womanofdifferencegroup.com</p>
           </div>
         </div>
         
