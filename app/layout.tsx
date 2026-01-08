@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Woman of Difference", url: "https://womanofdifference.com" }],
   openGraph: {
-    title: "Woman of Difference – Empowering Women Through Transformation",
+    title: "Woman of Difference – Equipping Individuals Through Transformation",
     description:
       "Transform your life through mindset coaching, premium cleaning services, and empowering events with Woman of Difference.",
     url: "https://womanofdifference.com",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: "https://womanofdifference.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Woman of Difference – Empowering Women",
+        alt: "Woman of Difference – Equipping Individuals",
       },
     ],
     locale: "en_US",

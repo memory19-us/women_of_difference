@@ -120,7 +120,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Email</p>
-                      <p className="text-muted-foreground">info@womanofdifference.com</p>
+                      <p className="text-muted-foreground text-sm">info@womanofdifferencegroup.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -129,7 +129,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Phone</p>
-                      <p className="text-muted-foreground">(555) 123-4567</p>
+                      <p className="text-muted-foreground">+1 (347) 987-9304</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -138,7 +138,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Location</p>
-                      <p className="text-muted-foreground">Serving communities nationwide</p>
+                      <p className="text-muted-foreground">310 3rd Street, Farmington, 55025 MN.USA</p>
                     </div>
                   </div>
                 </div>

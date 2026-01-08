@@ -17,7 +17,7 @@ export default function Hero() {
           Expanding Our <span className="text-[#F5A623]">Reach</span>
         </h1>
         <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-          Through Luketekelo and Faith Family Foundation, we are creating sustainable change and restoring hope in communities around the world.
+          Through Luketekelo and Faith Family Foundation, we are transforming children&apos;s lives and restoring hope in communities around us.
         </p>
         
         <div className="mt-8 flex justify-center gap-4">

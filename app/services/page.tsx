@@ -1,179 +1,337 @@
-"use client"
-import { Brain, Sparkles, Calendar } from "lucide-react";
+// "use client"
+// import { Brain, Sparkles, Calendar } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import Hero from "@/components/custom/services/hero";
+// import Navigation from "@/components/custom/common/navigation";
+// import Footer from "@/components/custom/common/footer";
+// import { useRouter } from "next/navigation";
+
+// const Services = () => {
+//   const scrollToContact = () => {
+//     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+//   };
+
+//   const router = useRouter()
+
+//   return (
+//     <main  className=" bg-background">
+//         <Navigation/>
+//         <Hero />
+//       <div className="max-w-6xl mx-auto px-4 py-24">
+//         <div className="text-center mb-16">
+//           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+//             Our <span className="text-[#F5A623]">Services</span>
+//           </h2>
+//           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+//             Comprehensive solutions designed to transform every aspect of your life
+//           </p>
+//         </div>
+
+//         <div className="space-y-24">
+//           {/* Mindset Transformation Coaching */}
+//           <div className="grid md:grid-cols-2 gap-12 items-center">
+//             <div className="order-2 md:order-1">
+//               <div className="flex items-center gap-4 mb-6">
+//                 <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center">
+//                   <Brain className="w-6 h-6 text-white" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-foreground">Mindset Transformation Coaching</h3>
+//               </div>
+//               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+//                 Transform your thinking patterns and unlock your full potential using our proven 
+//                 R.O.O.T.S FRAMEWORK. Our personalized coaching sessions help you identify limiting 
+//                 beliefs, develop empowering mindsets, and create lasting behavioral change.
+//               </p>
+//               <ul className="space-y-3 mb-8">
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">One-on-one personalized coaching sessions</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">R.O.O.T.S FRAMEWORK implementation</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Goal setting and accountability tracking</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Continuous support and guidance</span>
+//                 </li>
+//               </ul>
+//               <Button 
+//                 size="lg"
+//                 className="bg-[#F5A623] hover:bg-[#F5A623]/90 shadow-glow"
+//                 onClick={()=> router.push("/contact")}
+//               >
+//                 Start Your Transformation
+//               </Button>
+//             </div>
+//             <div className="order-1 md:order-2">
+//               <img
+//                 src={"/images/coaching-image.jpg"}
+//                 alt="Mindset transformation coaching session"
+//                 className="rounded-2xl shadow-card-hover w-full"
+//               />
+//             </div>
+//           </div>
+
+//           {/* Cleaning Services */}
+//           <div className="grid md:grid-cols-2 gap-12 items-center">
+//             <div>
+//               <img
+//                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=1200"
+//                 alt="Professional cleaning services"
+//                 className="rounded-2xl shadow-card-hover w-full"
+//               />
+//             </div>
+//             <div>
+//               <div className="flex items-center gap-4 mb-6">
+//                 <div className="w-12 h-12 bg-gradient-teal rounded-lg flex items-center justify-center">
+//                   <Sparkles className="w-6 h-6 text-white" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-foreground">Premium Cleaning Services</h3>
+//               </div>
+//               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+//                 Your environment shapes your mindset. Our professional cleaning services create 
+//                 the pristine, organized space you need to thrive. A clean home is the foundation 
+//                 for a clear mind and productive life.
+//               </p>
+//               <ul className="space-y-3 mb-8">
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Residential deep cleaning</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Regular maintenance cleaning</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Eco-friendly products available</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Flexible scheduling options</span>
+//                 </li>
+//               </ul>
+//               <Button 
+//                 size="lg"
+//                 className="bg-[#3FA3A3] hover:bg-[#3FA3A3]/90"
+//                 onClick={()=> router.push("/contact")}
+//               >
+//                 Book Cleaning Service
+//               </Button>
+//             </div>
+//           </div>
+
+//           {/* Events & Empowerment */}
+//           <div className="grid md:grid-cols-2 gap-12 items-center">
+//             <div className="order-2 md:order-1">
+//               <div className="flex items-center gap-4 mb-6">
+//                 <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center">
+//                   <Calendar className="w-6 h-6 text-white" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-foreground">Events & Empowerment</h3>
+//               </div>
+//               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+//                 Connect with like-minded women, share experiences, and grow together. Our events 
+//                 provide inspiration, education, and the community support essential for lasting 
+//                 transformation and personal development.
+//               </p>
+//               <ul className="space-y-3 mb-8">
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Monthly empowerment workshops</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Networking and community building</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Guest speakers and panel discussions</span>
+//                 </li>
+//                 <li className="flex items-start gap-3">
+//                   <span className="text-[#F5A623] text-xl">✓</span>
+//                   <span className="text-muted-foreground">Skills development sessions</span>
+//                 </li>
+//               </ul>
+//               <Button 
+//                 size="lg"
+//                 className="bg-[#F5A623] hover:bg-[#F5A623]/90 shadow-glow"
+//                 onClick={()=> router.push("/contact")}
+//               >
+//                 Join Our Events
+//               </Button>
+//             </div>
+//             <div className="order-1 md:order-2">
+//               <img
+//                 src={"/images/events.jpg"}
+//                 alt="Empowerment events and community gatherings"
+//                 className="rounded-2xl shadow-card-hover w-full"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       <Footer/>
+//     </main>
+//   );
+// };
+
+// export default Services;
+
+"use client";
+
+import { Brain, Sparkles, Calendar, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Hero from "@/components/custom/services/hero";
 import Navigation from "@/components/custom/common/navigation";
 import Footer from "@/components/custom/common/footer";
+import { useRouter } from "next/navigation";
 
 const Services = () => {
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const router = useRouter();
 
   return (
-    <main  className=" bg-background">
-        <Navigation/>
-        <Hero />
-      <div className="max-w-6xl mx-auto px-4 py-24">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <main className="bg-background">
+      <Navigation />
+      <Hero />
+
+      <div className="max-w-6xl mx-auto px-4 py-24 space-y-28">
+
+        {/* Header */}
+        <div className="text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="text-[#F5A623]">Services</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive solutions designed to transform every aspect of your life
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Revenue-generating services and community initiatives designed to empower individuals,
+            strengthen leadership, and create sustainable transformation.
           </p>
         </div>
 
-        <div className="space-y-24">
-          {/* Mindset Transformation Coaching */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-foreground">Mindset Transformation Coaching</h3>
-              </div>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Transform your thinking patterns and unlock your full potential using our proven 
-                R.O.O.T.S FRAMEWORK. Our personalized coaching sessions help you identify limiting 
-                beliefs, develop empowering mindsets, and create lasting behavioral change.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">One-on-one personalized coaching sessions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">R.O.O.T.S FRAMEWORK implementation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Goal setting and accountability tracking</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Continuous support and guidance</span>
-                </li>
-              </ul>
-              <Button 
-                size="lg"
-                className="bg-[#F5A623] hover:bg-[#F5A623]/90 shadow-glow"
-                onClick={scrollToContact}
-              >
-                Start Your Transformation
-              </Button>
+        {/* 1. Mindset Coaching */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <Brain className="w-8 h-8 text-[#F5A623]" />
+              <h3 className="text-3xl font-bold">
+                Mindset Transformation Coaching
+              </h3>
             </div>
-            <div className="order-1 md:order-2">
-              <img
-                src={"/images/coaching-image.jpg"}
-                alt="Mindset transformation coaching session"
-                className="rounded-2xl shadow-card-hover w-full"
-              />
-            </div>
+
+            <p className="text-muted-foreground mb-6">
+              <strong>Secondary Revenue Stream.</strong> Personalized and group coaching designed
+              to cultivate clarity, discipline, leadership capacity, and sustainable growth.
+            </p>
+
+            <ul className="space-y-3 mb-6">
+              <li>• 1:1 mindset and leadership coaching</li>
+              <li>• Group coaching sessions</li>
+              <li>• Leadership formation workshops</li>
+            </ul>
+
+            <p className="text-sm text-muted-foreground mb-8">
+              <strong>Target Clients:</strong> Founders, leaders, individuals, and youth seeking clarity,
+              discipline, and purpose-driven growth.
+            </p>
+
+            <Button onClick={() => router.push("/contact")} size="lg">
+              Start Coaching
+            </Button>
           </div>
 
-          {/* Cleaning Services */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=1200"
-                alt="Professional cleaning services"
-                className="rounded-2xl shadow-card-hover w-full"
-              />
+          <img
+            src="/images/coaching-image.jpg"
+            className="rounded-2xl"
+            alt="Mindset Coaching"
+          />
+        </section>
+
+        {/* 2. Cleaning Services */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <img
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+            className="rounded-2xl"
+            alt="Cleaning Services"
+          />
+
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <Sparkles className="w-8 h-8 text-[#3FA3A3]" />
+              <h3 className="text-3xl font-bold">
+                Premium Cleaning Services
+              </h3>
             </div>
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-teal rounded-lg flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-foreground">Premium Cleaning Services</h3>
-              </div>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Your environment shapes your mindset. Our professional cleaning services create 
-                the pristine, organized space you need to thrive. A clean home is the foundation 
-                for a clear mind and productive life.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Residential deep cleaning</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Regular maintenance cleaning</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Eco-friendly products available</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Flexible scheduling options</span>
-                </li>
-              </ul>
-              <Button 
-                size="lg"
-                className="bg-[#3FA3A3] hover:bg-[#3FA3A3]/90"
-                onClick={scrollToContact}
-              >
-                Book Cleaning Service
-              </Button>
+
+            <p className="text-muted-foreground mb-6">
+              <strong>Primary Revenue Stream.</strong> Professional, reliable, and discreet cleaning
+              services delivered with excellence and consistency.
+            </p>
+
+            <ul className="space-y-3 mb-6">
+              <li>• Residential cleaning</li>
+              <li>• Move-in / move-out cleaning</li>
+              <li>• Office & small business cleaning</li>
+              <li>• Deep & seasonal cleaning</li>
+            </ul>
+
+            <p className="text-sm text-muted-foreground mb-6">
+              <strong>Community Impact Initiative (Non-Revenue):</strong><br />
+              Free residential cleaning services for elderly individuals living alone
+              and lacking support — strengthening trust, dignity, and community alignment.
+            </p>
+
+            <Button onClick={() => router.push("/contact")} size="lg">
+              Book Cleaning
+            </Button>
+          </div>
+        </section>
+
+        {/* 3. Events & Empowerment */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <Calendar className="w-8 h-8 text-[#F5A623]" />
+              <h3 className="text-3xl font-bold">
+                Events & Empowerment Programs
+              </h3>
             </div>
+
+            <p className="text-muted-foreground mb-6">
+              Faith-aligned gatherings and leadership experiences designed
+              to equip, connect, and inspire communities.
+            </p>
+
+            <ul className="space-y-3 mb-6">
+              <li>• Community workshops</li>
+              <li>• Leadership & mindset events</li>
+              <li>• Faith-aligned empowerment sessions</li>
+            </ul>
+
+            <p className="text-sm text-muted-foreground mb-8">
+              <strong>Primary Target Markets:</strong><br />
+              Women conferences • Retreats • Youth conferences
+            </p>
+
+            <Button onClick={() => router.push("/contact")} size="lg">
+              Join Our Events
+            </Button>
           </div>
 
-          {/* Events & Empowerment */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-foreground">Events & Empowerment</h3>
-              </div>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Connect with like-minded women, share experiences, and grow together. Our events 
-                provide inspiration, education, and the community support essential for lasting 
-                transformation and personal development.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Monthly empowerment workshops</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Networking and community building</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Guest speakers and panel discussions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F5A623] text-xl">✓</span>
-                  <span className="text-muted-foreground">Skills development sessions</span>
-                </li>
-              </ul>
-              <Button 
-                size="lg"
-                className="bg-[#F5A623] hover:bg-[#F5A623]/90 shadow-glow"
-                onClick={scrollToContact}
-              >
-                Join Our Events
-              </Button>
-            </div>
-            <div className="order-1 md:order-2">
-              <img
-                src={"/images/events.jpg"}
-                alt="Empowerment events and community gatherings"
-                className="rounded-2xl shadow-card-hover w-full"
-              />
-            </div>
-          </div>
-        </div>
+          <img
+            src="/images/events.jpg"
+            className="rounded-2xl"
+            alt="Empowerment Events"
+          />
+        </section>
+
       </div>
-      <Footer/>
+
+      <Footer />
     </main>
   );
 };
