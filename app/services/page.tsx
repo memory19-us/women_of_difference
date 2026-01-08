@@ -313,7 +313,7 @@ const Services = () => {
             </ul>
 
             <p className="text-sm text-muted-foreground mb-8">
-              <strong>Primary Target Markets:</strong><br />
+              
               Women conferences • Retreats • Youth conferences
             </p>
 
