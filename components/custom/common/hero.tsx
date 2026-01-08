@@ -1,11 +1,14 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const router = useRouter();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -31,7 +34,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-[#F5A623] hover:bg-[#F5A623]/90 text-white shadow-glow transition-all hover:scale-105"
-              onClick={() => scrollToSection("services")}
+              onClick={() => router.push("/services")}
             >
               Explore Our Services
             </Button>
@@ -39,7 +42,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="bg-white/10 border-white text-white hover:bg-white hover:text-[#3FA3A3] backdrop-blur-sm"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => router.push("/contact")}
             >
               Get Started Today
             </Button>
