@@ -26,35 +26,34 @@ const books = [
         </p>
 
         <p>
-          Drawing from lived experience, Memory Grace Hector confronts a hard truth:
-          the moment that feels like denial is often preparation.
-        </p>
+        Drawing from lived experience and hard-won persistence, Memory Grace Hector confronts a sobering truth: the seasons marked by pain, rejection, and denial are often preparation for something sacred. This is not motivation. It is formation. </p>
 
-        <p className="italic">
+        {/* <p className="italic">
           This is not motivation.<br />
           It is formation.
-        </p>
+        </p> */}
 
         <p>
-          Written for leaders, youth, young women, and individuals who value depth over
-          applause and foundations over speed, this work challenges readers to remain
-          rooted when quitting feels justified.
-        </p>
+        Written for leaders, youth, young women, and individuals who value depth over applause, foundations over speed, and obedience over comfort, this work sets a clear standard. It does not rush the process; it honors it.</p>
 
         <div>
           <h4 className="text-lg font-bold text-gray-900 mb-3">
             This Book Calls You To:
           </h4>
           <ul className="space-y-2 list-disc pl-5">
-            <li>Stay when leaving feels logical</li>
-            <li>Build order before expecting increase</li>
+            <li>Stay when quitting feels justified.</li>
+            <li>Build order before expecting increase.</li>
             <li>Choose discipline over impulse</li>
             <li>Trust God’s work beneath the surface</li>
           </ul>
         </div>
 
         <p className="font-medium">
-          Sometimes the greatest mistake is leaving too soon.
+          Sometimes the greatest mistake is not failing it is leaving too soon.
+        </p>
+
+        <p>
+        This is a steady, principled reminder that what is being formed in you matters more than what is being seen through you.
         </p>
 
       </div>

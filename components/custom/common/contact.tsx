@@ -17,10 +17,34 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success( "Thank you for reaching out. We'll get back to you within 24 hours.")
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      toast.success("Thank you for reaching out. We'll get back to you within 24 hours.");
+      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -104,8 +128,13 @@ const Contact = () => {
                     className="bg-card"
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-[#F5A623] hover:bg-[#F5A623]/90 shadow-glow">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  disabled={isSubmitting}
+                  className="w-full bg-[#F5A623] hover:bg-[#F5A623]/90 disabled:bg-gray-400 disabled:cursor-not-allowed shadow-glow"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </div>
