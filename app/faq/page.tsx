@@ -10,12 +10,12 @@ const faqs = [
   {
     question: "Who is Grace?",
     answer:
-      "Grace is first a wife and a mother. Leadership came later, not by ambition, but by life. Her journey has included seasons of waiting, loss, rebuilding, and deep dependence on God. Through it all, she learned that transformation does not begin with performance, visibility, or success—it begins within. Her life and leadership are rooted in the Word of God, guided by integrity, and anchored in stewardship. She leads from experience, not theory."
+      "Grace is first a child of God, a wife and a mother. Leadership came later, not by ambition, but by life. Her journey has included seasons of waiting, loss, rebuilding, and deep dependence on God. Through it all, she learned that transformation does not begin with performance, visibility, or success it begins within. Her life and leadership are rooted in the Word of God, guided by integrity, and anchored in stewardship. She leads from experience, not theory."
   },
   {
     question: "What is Woman of Difference Group?",
     answer:
-      "Woman of Difference Group was born from a simple realization: many people want change, but few are taught how to build strong foundations. This platform exists to help individuals—especially women—heal what is broken, align what is out of order, and live and lead from a place of depth. It is not about hype or quick motivation. It is about faith, structure, discipline, and sustainable growth."
+      "Woman of Difference Group was born from a simple realization: many people want change, but few are taught how to build strong foundations. This platform exists to help individuals especially women heal what is broken, align what is out of order, and live and lead from a place of depth. It is not about hype or quick motivation. It is about faith, structure, discipline, and sustainable growth."
   },
   {
     question: "What are the foundations connected to Grace’s work?",
@@ -25,17 +25,17 @@ const faqs = [
   {
     question: "How do Grace, Woman of Difference Group, and the Foundations work together?",
     answer:
-      "Grace carries the vision. Woman of Difference Group forms people—mindset, faith, and leadership. The Foundations apply that formation in real communities with real needs. Together, they represent a complete model: belief, formation, and action working in harmony."
+      "Grace carries the vision. Woman of Difference Group equips people mindset, faith, and leadership. The Foundations apply that formation in real communities with real needs. Together, they represent a complete model: belief, formation, and action working in harmony."
   },
   {
     question: "What is the ROOTS Framework?",
     answer:
-      "The ROOTS Framework emerged from lived experience. Grace discovered that burnout, confusion, and inconsistency are rarely random—they are rooted. ROOTS focuses on faith, identity, responsibility, and order, teaching individuals and organizations to build depth before growth and alignment before expansion. It is about lasting transformation, not surface change."
+      "The ROOTS Framework emerged from lived experience. Grace discovered that burnout, confusion, and inconsistency are rarely random they are rooted. ROOTS focuses on faith, identity, responsibility, and order, teaching individuals and organizations to build depth before growth and alignment before expansion. It is about lasting transformation, not surface change."
   },
   {
     question: "Is this work faith-based?",
     answer:
-      "Yes—unapologetically. Faith here is not an accessory or a slogan. It is treated as infrastructure. Scripture guides mindset, leadership, decision-making, and service. Faith is lived, ordered, and practiced daily."
+      "Yes unapologetically. Faith here is not an accessory or a slogan. It is treated as infrastructure. Scripture guides mindset, leadership, decision-making, and service. Faith is lived, ordered, and practiced daily."
   },
   {
     question: "Who is this work for?",
@@ -45,17 +45,17 @@ const faqs = [
   {
     question: "Does Grace speak or lead sessions?",
     answer:
-      "Yes. Through Woman of Difference Group, Grace speaks at churches, conferences, leadership gatherings, and retreats. Her teaching is practical, faith-anchored, and deeply human—designed to equip people for real life, not just inspiration."
+      "Yes. Through Woman of Difference Group, Grace speaks at churches, conferences, leadership gatherings, and retreats. Her teaching is practical, faith-anchored, and deeply human designed to equip people for real life, not just inspiration."
   },
   {
     question: "How can I support or partner with the Foundations?",
     answer:
-      "Partnerships begin with prayer and extend into action. Some sponsor children. Others give, volunteer, or collaborate strategically. Every contribution—especially toward the work in Chibombo, Zambia—helps restore dignity, provide education, and create sustainable change."
+      "Partnerships begin with prayer and extend into action. Some sponsor children. Others give, volunteer, or collaborate strategically. Every contribution especially toward the work in Chibombo, Zambia helps restore dignity, provide education, and create sustainable change."
   },
   {
     question: "What can I expect from engaging with this work?",
     answer:
-      "Many describe a quiet but powerful shift: clearer thinking, deeper faith, emotional healing, disciplined leadership, and renewed purpose. This is not rushed transformation—it is rooted growth, built to last."
+      "Many describe a quiet but powerful shift: clearer thinking, deeper faith, emotional healing, disciplined leadership, and renewed purpose. This is not rushed transformation it is rooted growth, built to last."
   },
   {
     question: "How do I get started?",
@@ -65,17 +65,17 @@ const faqs = [
   {
     question: "What is Grace’s typical quiet time like?",
     answer:
-      "Grace’s quiet time is simple and disciplined. It is not driven by emotion or urgency, but by consistency. Scripture, prayer, reflection, and stillness form the core. Some days are profound. Other days are quiet. But the posture remains the same—showing up, listening, and allowing God to order the heart."
+      "Grace’s quiet time is simple and disciplined. It is not driven by emotion or urgency, but by consistency. Scripture, prayer, reflection, and stillness form the core. Some days are profound. Other days are quiet. But the posture remains the same showing up, listening, and allowing God to order the heart."
   },
   {
     question: "Can someone truly experience wholeness?",
     answer:
-      "Yes—but wholeness is a process, not a moment. It comes through truth, healing, responsibility, and surrender. Grace’s own journey testifies that broken places do not disqualify you; they often become the very ground where God does His deepest work."
+      "Yes but wholeness is a process, not a moment. It comes through truth, healing, responsibility, and surrender. Grace’s own journey testifies that broken places do not disqualify you; they often become the very ground where God does His deepest work."
   },
   {
     question: "How can I really hear God speak to me personally?",
     answer:
-      "God often speaks more quietly than we expect—through Scripture, conviction, peace, or restraint. Hearing God clearly requires slowing down, ordering one’s inner life, and learning to discern His voice over the noise of fear and emotion."
+      "God often speaks more quietly than we expect through Scripture, conviction, peace, or restraint. Hearing God clearly requires slowing down, ordering one’s inner life, and learning to discern His voice over the noise of fear and emotion."
   },
   {
     question: "Can someone from a poor background with no connections succeed in life?",
@@ -90,17 +90,17 @@ const faqs = [
   {
     question: "How do you balance ministry, motherhood, and marriage?",
     answer:
-      "Grace does not strive for balance; she trusts God for order. She learned that the same God who orders creation is capable of ordering life. This season requires clarity, sacrifice, and alignment with her husband. She protects her family, says no often, and moves only in seasons God has confirmed. This is not perfection—it is a daily, prayerful walk of alignment."
+      "Grace does not strive for balance; she trusts God for order. She learned that the same God who orders creation is capable of ordering life. This season requires clarity, sacrifice, and alignment with her husband. She protects her family, says no often, and moves only in seasons God has confirmed. This is not perfection it is a daily, prayerful walk of alignment."
   },
   {
     question: "Do you believe God still speaks through signs and wonders today?",
     answer:
-      "Yes, but with emphasis on maturity. God may still use signs and dreams, but He prioritizes relationship, obedience, and discernment. The goal is not spectacle—it is transformation."
+      "Yes, but with emphasis on maturity. God may still use signs and dreams, but He prioritizes relationship, obedience, and discernment. The goal is not spectacle it is transformation."
   },
   {
     question: "Why do I struggle to read the Bible?",
     answer:
-      "You are not alone. Many believers find it easier to read about the Bible before learning to sit with Scripture itself. This is not failure—it is an invitation into a deeper, more personal relationship with God."
+      "You are not alone. Many believers find it easier to read about the Bible before learning to sit with Scripture itself. This is not failure it is an invitation into a deeper, more personal relationship with God."
   },
   {
     question: "Is something wrong with my faith?",
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "Can I still use devotionals and Bible teachers?",
     answer:
-      "Yes—as support, not substitutes. Let them guide you back to Scripture, where God speaks most clearly."
+      "Yes as support, not substitutes. Let them guide you back to Scripture, where God speaks most clearly."
   },
   {
     question: "How do I stay consistent?",
@@ -138,7 +138,7 @@ export default function FAQ() {
       <Hero />
       <main className="py-24 max-w-5xl mx-auto px-4 space-y-4">
         <h1 className="text-3xl font-bold mb-6">
-          Frequently Asked Questions
+           Frequently Asked Questions
         </h1>
 
         {faqs.map((faq, idx) => (

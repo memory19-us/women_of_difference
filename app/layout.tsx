@@ -18,7 +18,7 @@ const inter = Inter({
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Woman of Difference – Empowering Women Through Transformation",
+  title: "Woman of Difference –  Equipping Individuals Through Transformation",
   description:
     "Transform your life through mindset coaching, premium cleaning services, and empowering events with Woman of Difference. Join a supportive community of women committed to growth and transformation.",
   keywords: [
