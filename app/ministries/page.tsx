@@ -79,7 +79,7 @@ export default function Ministries() {
             </p>
 
             <a
-              href="https://app.autobooks.co/pay/faith-family-foundation"
+              href="https://app.autobooks.co/pay/memory-g-hector"
               className="inline-block bg-[#3FA3A3] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#2e8e8e]"
             >
               Donate to Our Mission

@@ -9,7 +9,7 @@ const About = () => {
                         Equipping Individuals to Make a <span className="text-[#F5A623]">Difference</span>
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                        Women of Difference Group LLC is a purpose-driven startup providing professional cleaning services, coaching and leadership development, and empowerment events for individuals, organizations, and communities. The company operates with a dual focus: commercial excellence and community compassion.
+                        Women of Difference Group LLC is purpose-driven providing professional cleaning services, coaching and leadership development, and empowerment events for individuals, organizations, and communities. The company operates with a dual focus: commercial excellence and community compassion.
                         In addition to revenue-generating services, the company integrates a social impact initiative offering free residential cleaning services for elderly individuals who live alone and cannot afford professional support.
                         The business is designed to be lean, scalable, and values-anchored, positioning it for sustainable growth and grant-supported community impact.
                     </p>

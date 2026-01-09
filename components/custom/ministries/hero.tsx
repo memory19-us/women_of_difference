@@ -22,7 +22,7 @@ export default function Hero() {
         
         <div className="mt-8 flex justify-center gap-4">
          
-          <a target="blanks" href="https://app.autobooks.co/pay/faith-family-foundation" className="bg-white border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-8 rounded-full transition-colors">
+          <a target="blanks" href="https://app.autobooks.co/pay/memory-g-hector" className="bg-white border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-8 rounded-full transition-colors">
             Donate Now
           </a>
         </div>

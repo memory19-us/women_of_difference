@@ -8,7 +8,7 @@ const Footer = () => {
   const router = useRouter()
 
   return (
-    <footer className="bg-[#3FA3A3] text-white py-12">
+    <footer className="bg-[#102457] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
