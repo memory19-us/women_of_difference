@@ -76,7 +76,7 @@ export default function AboutGrace() {
 
           {/* Intro */}
           <p className="text-lg text-gray-700 mb-4">
-            <strong>Memory Grace Hector</strong> is a wife and mother first, grounding her leadership in faith, family, and stewardship.
+            <strong>Memory Grace Hector</strong> is a child of God, wife and mother first, grounding her leadership in faith, family, and stewardship.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-6">
