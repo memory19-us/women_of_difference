@@ -14,7 +14,7 @@ const books = [
     author: "Memory Grace Hector",
     description:
       "A guide to resilience when you feel like giving up. Rediscover the strength to continue your calling.",
-    link: "https://checkout.page/s/PYHWJg9IxhePy",
+    link: "https://app.autobooks.co/pay/memory-g-hector",
     image: "/images/book1.jfif",
     price: "10",
 
@@ -65,7 +65,7 @@ const books = [
     author: "Memory Grace Hector",
     description:
       "Steps to deepen your walk with God and navigate spiritual seasons with confidence and grace.",
-    link: "https://checkout.page/s/R6LGxuRbjeBor",
+    link: "https://app.autobooks.co/pay/memory-g-hector",
     image: "/images/book.jpg",
 
     longContent: (
@@ -145,7 +145,7 @@ const books = [
     author: "Memory Grace Hector",
     description:
       "A timeless hardcover edition for readers committed to faith, depth, and legacy.",
-    link: "https://checkout.page/s/v4CzaEhe2iueW",
+    link: "https://app.autobooks.co/pay/memory-g-hector",
     image: "/images/book.jpg",
 
     longContent: (
