@@ -1,4 +1,6 @@
+
 export default function Hero() {
+
   return (
     <section className="relative bg-gradient-to-r from-[#3FA3A3]/95 via-[#3FA3A3]/80 to-[#F5A623] pt-32 pb-20">
       <div className="max-w-6xl mx-auto px-4">
@@ -16,7 +18,7 @@ export default function Hero() {
               From mindset coaching to creating pristine environments, we offer holistic services designed to help you thrive in every area of life.
             </p>
             <a 
-              href="#contact" 
+              href={"/contact"}
               className="inline-block bg-[#3FA3A3] hover:bg-[#2e8e8e] text-white font-semibold py-3 px-8 rounded-full transition-colors shadow-md"
             >
               Get Started Today
