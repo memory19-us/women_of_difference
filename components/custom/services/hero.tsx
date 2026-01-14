@@ -11,13 +11,13 @@ export default function Hero() {
               What We Do
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mb-6">
-              Transform Your <br/>
+              Transform Your <br />
               <span className="text-[#F5A623]">Life & Space</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
               From mindset coaching to creating pristine environments, we offer holistic services designed to help you thrive in every area of life.
             </p>
-            <a 
+            <a
               href={"/contact"}
               className="inline-block bg-[#3FA3A3] hover:bg-[#2e8e8e] text-white font-semibold py-3 px-8 rounded-full transition-colors shadow-md"
             >
@@ -29,12 +29,12 @@ export default function Hero() {
           <div className="flex-1 relative">
             {/* Decorative Amber Blobs behind image */}
             <div className="absolute inset-0 bg-[#F5A623]/10 rounded-full blur-3xl transform scale-75 -z-10"></div>
-            
+
             <div className="relative rounded-2xl overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
-              <img 
-                src="/images/coaching.jpg" 
-                alt="Services Overview" 
-                className="w-full h-auto object-cover"
+              <img
+                src="/images/images.jpeg"
+                alt="Services Overview"
+                className="w-full h-96 object-cover"
               />
               {/* Floating Card Overlay */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-lg shadow-lg border-l-4 border-[#F5A623]">

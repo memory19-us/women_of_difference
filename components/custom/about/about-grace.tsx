@@ -2,7 +2,7 @@
 //   return (
 //     <section className="bg-[#F3F6F6] rounded-3xl p-6 md:p-10 -mx-4 md:mx-0">
 //       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-        
+
 //         {/* Image Side */}
 //         <div className="w-full md:w-1/2 relative">
 //           <div className="rounded-lg overflow-hidden shadow-lg relative z-10">
@@ -34,7 +34,7 @@
 // Her leadership is shaped by lived experience, disciplined faith, and a firm conviction that sustainable impact requires depth before growth. Through the ROOTS Mindset Transformation Framework, Memory Grace equips individuals and organizations to heal, align, and lead with clarity, stewardship, and longevity building foundations that support scale without compromise.
 // As the author of Too Soon to Quit and On the Journey of Faith, and as a speaker, she carries a redemptive message: purpose can emerge from pain, and faith when ordered and lived, produces generational outcomes. Her work reflects compassion guided by strategy, honoring timeless values while building responsibly for the future.
 // </p>
-        
+
 //         </div>
 //       </div>
 //     </section>
@@ -51,12 +51,12 @@ export default function AboutGrace() {
   return (
     <section className="bg-[#F3F6F6] rounded-3xl p-6 md:p-10 -mx-4 md:mx-0">
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-        
+
         {/* Image Side */}
         <div className="w-full md:w-1/2 relative">
           <div className="rounded-lg overflow-hidden shadow-lg relative z-10">
             <img
-              src="/images/memory.jpg"
+              src="/images/memory.jpeg"
               alt="Memory Grace Hector"
               className="w-full h-auto object-cover"
             />
