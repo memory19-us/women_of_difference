@@ -13,13 +13,10 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <video
-          src={"/videos/home.mp4"}
-          // alt="Empowered woman in transformation"
+        <img
+          src={"/images/hero-image.jpg"}
+          alt="Empowered woman in transformation"
           className="w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#3FA3A3]/95 via-[#3FA3A3]/80 to-transparent" />
       </div>

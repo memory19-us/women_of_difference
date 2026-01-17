@@ -26,7 +26,8 @@ const Navigation = () => {
     { label: "Our Ministries", id: "roots", path:"/ministries" },
     { label: "Resources", id: "roots", path:"/resources" },
     { label: "FAQ", id: "roots", path:"/faq" },
-    { label: "Contact", id: "contact", path:"/contact" },
+    { label: "Events", id: "events", path:"https://luma.com/8l6vu9fw" },
+        { label: "Contact", id: "contact", path:"/contact" },
   ];
 
   return (
