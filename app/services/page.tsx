@@ -6,6 +6,7 @@ import Hero from "@/components/custom/services/hero";
 import Navigation from "@/components/custom/common/navigation";
 import Footer from "@/components/custom/common/footer";
 import { useRouter } from "next/navigation";
+import { ReviewSection } from "@/components/custom/reviews/review-section";
 
 const Services = () => {
   const router = useRouter();
@@ -128,7 +129,7 @@ const Services = () => {
             </ul>
 
             <p className="text-sm text-muted-foreground mb-8">
-              
+
               Women conferences • Retreats • Youth conferences
             </p>
 
@@ -138,12 +139,28 @@ const Services = () => {
           </div>
 
           <video
-  src="/videos/event.mp4"
-  controls
-  className=" w-full rounded-2xl"
-/>
+            src="/videos/event.mp4"
+            controls
+            className=" w-full rounded-2xl"
+          />
 
         </section>
+
+        <div className="border-t border-gray-100 pt-20">
+          <ReviewSection
+            itemType="service"
+            itemId="cleaning-services"
+            title="Cleaning Service Reviews"
+          />
+        </div>
+
+        <div className="border-t border-gray-100 pt-20">
+          <ReviewSection
+            itemType="service"
+            itemId="mindset-coaching"
+            title="Coaching Reviews"
+          />
+        </div>
 
       </div>
 

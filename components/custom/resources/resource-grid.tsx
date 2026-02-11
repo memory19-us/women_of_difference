@@ -1,12 +1,13 @@
 
 import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog"
+import { ReviewSection } from "../reviews/review-section"
 
 const books = [
   {
@@ -17,6 +18,7 @@ const books = [
     link: "https://app.autobooks.co/pay/memory-g-hector",
     image: "/images/book1.jfif",
     price: "10",
+    id: "too-soon-to-quit",
 
     longContent: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -26,7 +28,7 @@ const books = [
         </p>
 
         <p>
-        Drawing from lived experience and hard-won persistence, Memory Grace Hector confronts a sobering truth: the seasons marked by pain, rejection, and denial are often preparation for something sacred. This is not motivation. It is formation. </p>
+          Drawing from lived experience and hard-won persistence, Memory Grace Hector confronts a sobering truth: the seasons marked by pain, rejection, and denial are often preparation for something sacred. This is not motivation. It is formation. </p>
 
         {/* <p className="italic">
           This is not motivation.<br />
@@ -34,7 +36,7 @@ const books = [
         </p> */}
 
         <p>
-        Written for leaders, youth, young women, and individuals who value depth over applause, foundations over speed, and obedience over comfort, this work sets a clear standard. It does not rush the process; it honors it.</p>
+          Written for leaders, youth, young women, and individuals who value depth over applause, foundations over speed, and obedience over comfort, this work sets a clear standard. It does not rush the process; it honors it.</p>
 
         <div>
           <h4 className="text-lg font-bold text-gray-900 mb-3">
@@ -53,7 +55,7 @@ const books = [
         </p>
 
         <p>
-        This is a steady, principled reminder that what is being formed in you matters more than what is being seen through you.
+          This is a steady, principled reminder that what is being formed in you matters more than what is being seen through you.
         </p>
 
       </div>
@@ -67,6 +69,7 @@ const books = [
       "Steps to deepen your walk with God and navigate spiritual seasons with confidence and grace.",
     link: "https://app.autobooks.co/pay/memory-g-hector",
     image: "/images/book.jpg",
+    id: "journey-of-faith-paperback",
 
     longContent: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -147,6 +150,7 @@ const books = [
       "A timeless hardcover edition for readers committed to faith, depth, and legacy.",
     link: "https://app.autobooks.co/pay/memory-g-hector",
     image: "/images/book.jpg",
+    id: "journey-of-faith-hardcover",
 
     longContent: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -223,89 +227,93 @@ const books = [
 
 
 export default function ResourceGrid() {
-    return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {books.map((book, idx) => (
-                <div
-                    key={idx}
-                    className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col h-full"
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {books.map((book, idx) => (
+        <div
+          key={idx}
+          className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col h-full"
+        >
+          {/* Book Cover Image Area */}
+          <div className="relative h-64 md:h-72 bg-gray-100 overflow-hidden flex items-center justify-center p-8">
+            <div className="relative w-32 md:w-40 aspect-2/3 shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
+              {/* Using a div wrapper to simulate a book aspect ratio */}
+              <img
+                src={book.image}
+                alt={book.title}
+                className="w-full h-full object-cover rounded-sm"
+              />
+            </div>
+          </div>
+
+          {/* Content Area */}
+          <div className="p-6 flex-1 flex flex-col">
+            <div className="mb-4">
+              <span className="text-[#F5A623] text-xs font-bold uppercase tracking-wider">
+                Book
+              </span>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mt-1 group-hover:text-[#3FA3A3] transition-colors">
+                {book.title}
+              </h3>
+              <p className="text-sm text-gray-500 italic mb-3">by {book.author}</p>
+            </div>
+
+            <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
+              {book.description}
+            </p>
+
+            <a
+              href={book.link}
+              className="inline-flex items-center justify-center w-full py-3 px-4 border border-[#3FA3A3] text-[#3FA3A3] font-semibold rounded-lg hover:bg-[#3FA3A3] hover:text-white transition-colors"
+            >
+              Buy
+            </a>
+
+            <Dialog>
+              <DialogTrigger>
+                <a
+                  className="inline-flex items-center justify-center py-3 mt-4 px-4 bg-[#3FA3A3] w-full h-12 hover:bg-[#F5A623] font-semibold rounded-lg  hover:text-white transition-colors text-center"
                 >
-                    {/* Book Cover Image Area */}
-                    <div className="relative h-64 md:h-72 bg-gray-100 overflow-hidden flex items-center justify-center p-8">
-                        <div className="relative w-32 md:w-40 aspect-[2/3] shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
-                            {/* Using a div wrapper to simulate a book aspect ratio */}
-                            <img
-                                src={book.image}
-                                alt={book.title}
-                                className="w-full h-full object-cover rounded-sm"
-                            />
-                        </div>
-                    </div>
+                  View Details
+                </a>
+              </DialogTrigger>
+              <DialogContent className="flex flex-col items-center max-w-5xl">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold">{book.title}</DialogTitle>
 
-                    {/* Content Area */}
-                    <div className="p-6 flex-1 flex flex-col">
-                        <div className="mb-4">
-                            <span className="text-[#F5A623] text-xs font-bold uppercase tracking-wider">
-                                Book
-                            </span>
-                            <h3 className="text-xl font-bold font-serif text-gray-900 mt-1 group-hover:text-[#3FA3A3] transition-colors">
-                                {book.title}
-                            </h3>
-                            <p className="text-sm text-gray-500 italic mb-3">by {book.author}</p>
-                        </div>
-
-                        <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
-                            {book.description}
-                        </p>
-
-                        <a
-                            href={book.link}
-                            className="inline-flex items-center justify-center w-full py-3 px-4 border border-[#3FA3A3] text-[#3FA3A3] font-semibold rounded-lg hover:bg-[#3FA3A3] hover:text-white transition-colors"
-                        >
-                            Buy
-                        </a>
-
-                        <Dialog>
-                            <DialogTrigger>
-                                 <a
-                            className="inline-flex items-center justify-center py-3 mt-4 px-4 bg-[#3FA3A3] w-full h-12 hover:bg-[#F5A623] font-semibold rounded-lg  hover:text-white transition-colors text-center"
-                        >
-                           View Details
-                        </a>
-                                </DialogTrigger>
-                            <DialogContent className="flex flex-col items-center">
-                                <DialogHeader>
-                                    <DialogTitle className="text-2xl font-bold">{book.title}</DialogTitle>
-
-                                    <img
-                                        src={book.image}
-                                        alt={book.title}
-                                        className="w-52 h-52 object-cover rounded-sm"
-                                    />
-                                </DialogHeader>
-                                <p className="text-xl font-semibold ">Book Description</p>
-                               <div className="w-full mt-4">
-  {book.longContent}
-</div>
-
-
-
-
-                                <a
-                                    href={book.link}
-                                    className="inline-flex items-center justify-center w-full py-3 px-4 border border-[#3FA3A3] text-[#3FA3A3] font-semibold rounded-lg hover:bg-[#3FA3A3] hover:text-white transition-colors mt-10"
-                                >
-                                    Buy
-                                </a>
-
-                            </DialogContent>
-                            <DialogFooter>
-
-                            </DialogFooter>
-                        </Dialog>
-                    </div>
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    className="w-52 h-52 object-cover rounded-sm"
+                  />
+                </DialogHeader>
+                <p className="text-xl font-semibold ">Book Description</p>
+                <div className="w-full mt-4">
+                  {book.longContent}
                 </div>
-            ))}
+
+
+
+
+                <a
+                  href={book.link}
+                  className="inline-flex items-center justify-center w-full py-3 px-4 border border-[#3FA3A3] text-[#3FA3A3] font-semibold rounded-lg hover:bg-[#3FA3A3] hover:text-white transition-colors mt-10"
+                >
+                  Buy
+                </a>
+
+                <div className="w-full mt-12 pt-12 border-t border-gray-100">
+                  <ReviewSection itemType="book" itemId={book.id} />
+                </div>
+
+              </DialogContent>
+              <DialogFooter>
+
+              </DialogFooter>
+            </Dialog>
+          </div>
         </div>
-    );
+      ))}
+    </div>
+  );
 }
