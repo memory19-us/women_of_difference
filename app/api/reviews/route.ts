@@ -11,6 +11,7 @@ const reviewSchema = z.object({
     userEmail: z.string().email(),
     rating: z.number().min(1).max(5),
     comment: z.string().min(10),
+    deletePin: z.string().min(4).max(6),
 });
 
 export async function GET(request: Request) {
@@ -19,19 +20,35 @@ export async function GET(request: Request) {
     const itemId = searchParams.get("itemId");
 
     try {
-        let query = db.select().from(reviews);
+        let query = db.select({
+            id: reviews.id,
+            itemType: reviews.itemType,
+            itemId: reviews.itemId,
+            userName: reviews.userName,
+            userEmail: reviews.userEmail,
+            rating: reviews.rating,
+            comment: reviews.comment,
+            createdAt: reviews.createdAt,
+            // Explicitly exclude deletePin from GET results
+        }).from(reviews);
 
         if (itemType && itemId) {
-            // @ts-ignore - Drizzle types can be tricky with dynamic queries sometimes
-            query = db.select().from(reviews).where(
+            // @ts-ignore
+            query = db.select({
+                id: reviews.id,
+                itemType: reviews.itemType,
+                itemId: reviews.itemId,
+                userName: reviews.userName,
+                userEmail: reviews.userEmail,
+                rating: reviews.rating,
+                comment: reviews.comment,
+                createdAt: reviews.createdAt,
+            }).from(reviews).where(
                 and(
                     eq(reviews.itemType, itemType),
                     eq(reviews.itemId, itemId)
                 )
             );
-        } else if (itemType) {
-            // @ts-ignore
-            query = db.select().from(reviews).where(eq(reviews.itemType, itemType));
         }
 
         const results = await query;
@@ -52,12 +69,42 @@ export async function POST(request: Request) {
             createdAt: new Date(),
         }).returning();
 
-        return NextResponse.json(newReview[0]);
+        // Remove deletePin from response
+        const { deletePin, ...safeResponse } = newReview[0];
+        return NextResponse.json(safeResponse);
     } catch (error) {
         if (error instanceof z.ZodError) {
             return NextResponse.json({ error: error.issues }, { status: 400 });
         }
         console.error("Failed to post review:", error);
         return NextResponse.json({ error: "Failed to post review" }, { status: 500 });
+    }
+}
+
+export async function DELETE(request: Request) {
+    try {
+        const { id, deletePin } = await request.json();
+
+        if (!id || !deletePin) {
+            return NextResponse.json({ error: "Missing ID or PIN" }, { status: 400 });
+        }
+
+        // Verify the review exists and PIN matches
+        const existingReview = await db.select().from(reviews).where(eq(reviews.id, id)).limit(1);
+
+        if (existingReview.length === 0) {
+            return NextResponse.json({ error: "Review not found" }, { status: 404 });
+        }
+
+        if (existingReview[0].deletePin !== deletePin) {
+            return NextResponse.json({ error: "Invalid PIN" }, { status: 401 });
+        }
+
+        await db.delete(reviews).where(eq(reviews.id, id));
+
+        return NextResponse.json({ success: true });
+    } catch (error) {
+        console.error("Failed to delete review:", error);
+        return NextResponse.json({ error: "Failed to delete review" }, { status: 500 });
     }
 }

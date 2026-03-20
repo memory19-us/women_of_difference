@@ -54,7 +54,7 @@ export function ReviewSection({ itemType, itemId, title = "Reviews" }: ReviewSec
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
                 <div className="lg:col-span-3 order-2 lg:order-1">
-                    <ReviewList reviews={reviews} isLoading={isLoading} />
+                    <ReviewList reviews={reviews} isLoading={isLoading} onDeleteSuccess={fetchReviews} />
                 </div>
                 <div className="lg:col-span-2 order-1 lg:order-2">
                     <div className="sticky top-8">

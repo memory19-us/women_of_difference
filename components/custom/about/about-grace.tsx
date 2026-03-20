@@ -70,14 +70,34 @@ export default function AboutGrace() {
             Founder
           </h4>
 
-          <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">
-            Get to Know Grace
+          <h2 className="text-3xl font-serif font-black text-gray-900 mb-6">
+            Get to Know Memory Grace Hector
           </h2>
 
-          {/* Intro */}
-          <p className="text-lg text-gray-700 mb-4">
-            <strong>Memory Grace Hector</strong> is a child of God, wife and mother first, grounding her leadership in faith, family, and stewardship.
-          </p>
+          <div className="space-y-6 mb-8">
+            <h3 className="text-xl font-bold text-[#F5A623] italic">
+              Built on Experience. Proven Through Impact.
+            </h3>
+            
+            <ul className="space-y-4 text-gray-700 font-medium">
+              <li className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-[#3FA3A3] rounded-full"></div>
+                <span>Founder of multiple organizations.</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-[#3FA3A3] rounded-full"></div>
+                <span>International speaker</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-[#3FA3A3] rounded-full"></div>
+                <span>Author of <span className="italic">On the Journey of Faith</span> & <span className="italic">Too Soon to Quit</span>.</span>
+              </li>
+              <li className="flex items-center gap-3 leading-tight">
+                <div className="w-2 h-2 bg-[#3FA3A3] rounded-full shrink-0"></div>
+                <span>Builder of <span className="font-bold">Luketekelo Family Foundation Zambia</span> & <span className="font-bold">Faith Family Foundation USA</span>.</span>
+              </li>
+            </ul>
+          </div>
 
           <p className="text-gray-600 leading-relaxed mb-6">
             She is an author, speaker, and mindset transformation leader committed to teaching the Word of God in ways that renew minds, strengthen identity, and produce enduring transformation.

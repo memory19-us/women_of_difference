@@ -9,30 +9,16 @@ export default function About() {
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <Hero />
 
       {/* Intro / Mission */}
-      <div className="max-w-5xl mx-auto px-4 -mt-16 relative z-10 mb-16">
-        <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg text-center border border-gray-100">
-          <h2 className="text-2xl md:text-3xl font-bold text-teal-600 mb-4 font-serif">Our Mission Statement</h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          To deliver high-quality services that restore order, dignity, and confidence while empowering individuals and communities to live aligned, purposeful lives. </p>
+      <main className="max-w-7xl mx-auto px-4 space-y-32 pb-32">
+        <div className="pt-20">
+          <RootsSection />
         </div>
-      </div>
 
-
-      <div className="max-w-5xl mx-auto px-4 mt-16 relative z-10 mb-16">
-        <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg text-center border border-gray-100">
-          <h2 className="text-2xl md:text-3xl font-bold text-teal-600 mb-4 font-serif">Our Vision Statement</h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          To build a trusted service brand known for excellence, integrity, and compassionate leadership, creating measurable impact while maintaining operational discipline.  </p>
-        </div>
-      </div>
-
-      <main className="max-w-5xl mx-auto px-4 space-y-20 pb-20">
-        
         {/* ROOTS Framework */}
         <RootsSection />
 
@@ -41,9 +27,9 @@ export default function About() {
 
         {/* Faith Statement */}
         <FaithStatement />
-        
+
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -8,5 +8,6 @@ export const reviews = sqliteTable("reviews", {
     userEmail: text("user_email").notNull(),
     rating: integer("rating").notNull(),
     comment: text("comment").notNull(),
+    deletePin: text("delete_pin").notNull(),
     createdAt: integer("created_at", { mode: 'timestamp' }).notNull(),
 });

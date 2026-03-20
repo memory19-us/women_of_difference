@@ -18,41 +18,48 @@ export default function Contact() {
           {/* Left Side: Contact Info & Context */}
           <div className="space-y-12">
             <div>
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Get in Touch</h2>
-              <div className="text-gray-600 text-lg leading-relaxed space-y-4">
+              <h2 className="text-3xl font-black text-slate-900 mb-8 tracking-tight">Get in Touch</h2>
+              <div className="text-slate-600 text-lg leading-relaxed space-y-6">
                 <p>
-                  Whether you have questions about the ROOTS Framework,<br />
-                  are seeking professional support to organize and clean your space,<br />
-                  wish to book a coaching session,<br />
-                  or simply want to connect and say hello<br />
-                  we would be pleased to hear from you.
+                  Whether you are seeking clarity on the <span className="text-[#F5A623] font-bold text-nowrap">R.O.O.T.E.D Framework</span>, require professional support to restore order and excellence in your space, wish to engage in a coaching session, or simply desire to connect—we welcome the opportunity to hear from you.
                 </p>
 
-                <p>
-                  At our core, we value clarity, order, and intentional engagement.
+                <p className="font-bold text-slate-900">
+                  At the foundation of our work is a commitment to clarity, structure, and intentional engagement.
                 </p>
 
-                <div>
-                  <p className="mb-2">Every inquiry is an opportunity to:</p>
-                  <ul className="list-disc list-inside space-y-1 ml-2">
-                    <li>Serve with excellence</li>
-                    <li>Respond with care</li>
-                    <li>Create alignment.</li>
+                <div className="space-y-4">
+                  <p className="font-bold text-[#3FA3A3] uppercase tracking-widest text-sm">Every inquiry is an opportunity to:</p>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#F5A623] font-bold text-xl leading-none">●</span>
+                      <span>Deliver service with excellence</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#F5A623] font-bold text-xl leading-none">●</span>
+                      <span>Respond with care and professionalism</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#F5A623] font-bold text-xl leading-none">●</span>
+                      <span>Create alignment that supports meaningful progress</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#F5A623] font-bold text-xl leading-none">●</span>
+                      <span>We value purposeful conversations and thoughtful connections.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#F5A623] font-bold text-xl leading-none">●</span>
+                      <span>It would be our privilege to engage with you and support your next step with clarity and direction.</span>
+                    </li>
                   </ul>
                 </div>
 
-                <p>
-                  We welcome the conversation<br />
-                  and look forward to engaging with you<br />
-                  in a meaningful and purposeful way.
+                <p className="pt-4">
+                  Please feel free to reach out at your convenience.
                 </p>
 
-                <p>
-                  Please reach out at your convenience.
-                </p>
-
-                <p>
-                  We are ready to support your next step.
+                <p className="font-bold text-slate-900">
+                  We stand ready to support you.
                 </p>
               </div>
             </div>
@@ -87,7 +94,7 @@ export default function Contact() {
                 <h3 className="font-bold text-gray-900 mb-3">Follow Us</h3>
                 <div className="flex gap-4">
                   <a 
-                    href="https://www.linkedin.com/in/meshagrace12345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                    href="https://www.linkedin.com/in/memorygracehector?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#0077B5] hover:text-white hover:border-[#0077B5] transition-all"
@@ -96,7 +103,7 @@ export default function Contact() {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a 
-                    href="https://www.facebook.com/share/p/181LGvcv8F/" 
+                    href="https://www.facebook.com/share/p/184U9SYM88/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all"

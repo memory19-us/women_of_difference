@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Star } from "lucide-react";
+import { Star, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
     Form,
@@ -23,6 +23,7 @@ const reviewSchema = z.object({
     userEmail: z.string().email("Invalid email address"),
     rating: z.number().min(1, "Please select a rating").max(5),
     comment: z.string().min(10, "Comment must be at least 10 characters"),
+    deletePin: z.string().min(4, "PIN must be at least 4 digits").max(6, "PIN must be max 6 digits"),
 });
 
 type ReviewFormValues = z.infer<typeof reviewSchema>;
@@ -36,6 +37,7 @@ interface ReviewFormProps {
 export function ReviewForm({ itemType, itemId, onSuccess }: ReviewFormProps) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [hoveredRating, setHoveredRating] = useState(0);
+    const [showPin, setShowPin] = useState(false);
 
     const form = useForm<ReviewFormValues>({
         resolver: zodResolver(reviewSchema),
@@ -44,6 +46,7 @@ export function ReviewForm({ itemType, itemId, onSuccess }: ReviewFormProps) {
             userEmail: "",
             rating: 0,
             comment: "",
+            deletePin: "",
         },
     });
 
@@ -76,7 +79,7 @@ export function ReviewForm({ itemType, itemId, onSuccess }: ReviewFormProps) {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <FormField
                         control={form.control}
                         name="userName"
@@ -98,6 +101,34 @@ export function ReviewForm({ itemType, itemId, onSuccess }: ReviewFormProps) {
                                 <FormLabel>Email</FormLabel>
                                 <FormControl>
                                     <Input placeholder="your@email.com" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="deletePin"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>PIN (To delete later)</FormLabel>
+                                <FormControl>
+                                    <div className="relative">
+                                        <Input 
+                                            type={showPin ? "text" : "password"} 
+                                            placeholder="4-6 digits" 
+                                            maxLength={6}
+                                            className="pr-10"
+                                            {...field} 
+                                        />
+                                        <button
+                                            type="button"
+                                            onClick={() => setShowPin(!showPin)}
+                                            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                                        >
+                                            {showPin ? <EyeOff size={18} /> : <Eye size={18} />}
+                                        </button>
+                                    </div>
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
