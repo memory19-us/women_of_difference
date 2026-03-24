@@ -15,12 +15,11 @@ export default function About() {
 
       {/* Intro / Mission */}
       <main className="max-w-7xl mx-auto px-4 space-y-32 pb-32">
-        <div className="pt-20">
-          <RootsSection />
-        </div>
 
         {/* ROOTS Framework */}
         <RootsSection />
+
+
 
         {/* About Grace */}
         <AboutGrace />

@@ -12,8 +12,9 @@ export default function Hero() {
           Frequently Asked <br/> Questions
         </h1>
         <p className="text-xl text-teal-50 max-w-2xl mx-auto">
-          Have questions about Grace, our mission, the ROOTS framework, or how to get involved? We've got you covered.
+          Have questions about Grace, our mission, the R.O.O.T.E.D framework, or how to get involved? We've got you covered.
         </p>
+
       </div>
     </section>
   );

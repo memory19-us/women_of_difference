@@ -22,7 +22,8 @@ export default function Hero() {
           href="#roots"
           className="inline-block bg-[#F5A623] hover:bg-[#d98e10] text-white font-semibold py-3 px-8 rounded-full transition-transform transform hover:-translate-y-1 shadow-md"
         >
-          Discover the ROOTS Framework
+          Discover the R.O.O.T.E.D Framework
+
         </a>
       </div>
     </section>

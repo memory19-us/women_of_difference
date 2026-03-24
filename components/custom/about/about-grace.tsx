@@ -135,7 +135,8 @@ export default function AboutGrace() {
                   Leadership & Framework
                 </h3>
                 <p>
-                  Through the <strong>ROOTS Mindset Transformation Framework</strong>,
+                  Through the <strong>R.O.O.T.E.D Mindset Transformation Framework</strong>,
+
                   Grace equips individuals and organizations to heal, align, and lead with
                   clarity, stewardship, and longevity—building foundations that support scale
                   without compromise.

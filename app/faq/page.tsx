@@ -28,9 +28,9 @@ const faqs = [
       "Grace carries the vision. Woman of Difference Group equips people mindset, faith, and leadership. The Foundations apply that formation in real communities with real needs. Together, they represent a complete model: belief, formation, and action working in harmony."
   },
   {
-    question: "What is the ROOTS Framework?",
+    question: "What is the R.O.O.T.E.D Framework?",
     answer:
-      "The ROOTS Framework emerged from lived experience. Grace discovered that inner wounds,burnout, confusion, and inconsistency are rarely random they are rooted. ROOTS focuses on faith, identity, responsibility, and order, teaching individuals and organizations to build depth before growth and alignment before expansion. It is about lasting transformation, not surface change."
+      "The R.O.O.T.E.D Framework emerged from lived experience. Grace discovered that inner wounds,burnout, confusion, and inconsistency are rarely random they are rooted. R.O.O.T.E.D focuses on faith, identity, responsibility, and order, teaching individuals and organizations to build depth before growth and alignment before expansion. It is about lasting transformation, not surface change."
   },
   {
     question: "Is this work faith-based?",

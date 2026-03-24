@@ -76,7 +76,8 @@ export default function RootsSection() {
         ))}
       </div>
 
-      <div className="mt-20 p-8 md:p-12 bg-slate-900 rounded-[3rem] text-white relative overflow-hidden">
+      <div className="mt-20 p-8 md:p-12 bg-[#102457] rounded-[3rem] text-white relative overflow-hidden">
+
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#F5A623]/10 blur-[100px] rounded-full"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#3FA3A3]/10 blur-[100px] rounded-full"></div>
         

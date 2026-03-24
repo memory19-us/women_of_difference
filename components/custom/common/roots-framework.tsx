@@ -43,14 +43,14 @@ const RootsFramework = () => {
 
 
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <h2 className="text-sm font-black tracking-[0.3em] text-white uppercase mb-4">THE ROOTED TRANSFORMATION FRAMEWORK</h2>
+          <h2 className="text-sm font-black tracking-[0.3em] text-white uppercase mb-4">THE R.O.O.T.E.D TRANSFORMATION FRAMEWORK</h2>
           <h3 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
             A Leadership Architecture for <br />
             <span className="text-white/80 italic">Deep Transformation</span>
           </h3>
           <div className="space-y-6 text-xl text-white/90 leading-relaxed font-medium max-w-3xl mx-auto">
             <p>
-              The Rooted transformation Framework is not just a program. It is a leadership architecture designed to guide transformation across individuals, institutions, and communities.
+              The R.O.O.T.E.D transformation Framework is not just a program. It is a leadership architecture designed to guide transformation across individuals, institutions, and communities.
             </p>
             {/* <p className="bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20">
               It addresses what many systems overlook: <span className="text-white font-black underline decoration-[#F5A623] underline-offset-8 decoration-2">identity, structure, character, and disciplined execution.</span>
@@ -65,7 +65,8 @@ const RootsFramework = () => {
             <div className="absolute -inset-4 bg-white/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <img
               src="/images/rooted.png"
-              alt="Rooted transformation Framework Architecture"
+              alt="R.O.O.T.E.D transformation Framework Architecture"
+
               className="relative w-full max-w-md h-auto object-contain animate-float drop-shadow-2xl"
             />
           </div>
@@ -102,7 +103,7 @@ const RootsFramework = () => {
                 Most people and institutions do not fail because they lack vision. They fail because they lack the internal foundation and structure to sustain growth.
               </p>
               <p className="text-white/70 text-lg leading-relaxed">
-                The Rooted transformation Framework builds that foundation by guiding people and organizations from the inside out, moving beyond inspiration into practical, measurable, lasting change.
+                The R.O.O.T.E.D transformation Framework builds that foundation by guiding people and organizations from the inside out, moving beyond inspiration into practical, measurable, lasting change.
               </p>
             </div>
 

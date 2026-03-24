@@ -20,7 +20,8 @@ export default function Resources() {
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
             Explore our curated resources designed to support faith, leadership, and personal growth.
-            These include books, teachings, and practical guides aligned with the ROOTS Framework.
+            These include books, teachings, and practical guides aligned with the R.O.O.T.E.D Framework.
+
           </p>
         </section>
 

@@ -6,9 +6,11 @@ const About = () => {
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-sm font-black tracking-[0.3em] text-[#F5A623] uppercase mb-4">WHO WE ARE</h2>
-                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 tracking-tighter uppercase whitespace-nowrap">
-                        WE DON’T JUST INSPIRE, <span className="text-[#3FA3A3]">WE BUILD</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-12 tracking-tight uppercase">
+                        WE DON’T JUST INSPIRE, <br className="hidden md:block" /> <span className="text-[#3FA3A3]">WE BUILD</span>
                     </h2>
+
+
                     <div className="text-lg md:text-xl text-slate-700 leading-relaxed space-y-8 font-medium">
                         <p>
                             Woman of Difference Group LLC is a leadership and consulting firm dedicated to building people and institutions from the inside out. We help individuals and organizations develop the identity, character, and structure required for sustainable growth, effective leadership, and lasting impact.

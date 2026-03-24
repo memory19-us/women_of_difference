@@ -63,7 +63,8 @@ const Services = () => {
           </section>
 
           {/* 2. Mindset Transformation Coaching (Featured Section) */}
-          <section className="bg-slate-950 text-white rounded-[4rem] p-8 md:p-20 relative overflow-hidden">
+          <section className="bg-[#102457] text-white rounded-[4rem] p-8 md:p-20 relative overflow-hidden">
+
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#F5A623]/10 blur-[150px] rounded-full"></div>
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#3FA3A3]/10 blur-[150px] rounded-full"></div>
 
