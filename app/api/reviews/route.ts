@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 
 const reviewSchema = z.object({
-    itemType: z.enum(["book", "service"]),
+    itemType: z.enum(["book", "service", "event"]),
     itemId: z.string().min(1),
     userName: z.string().min(2),
     userEmail: z.string().email(),

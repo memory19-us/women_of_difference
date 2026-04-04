@@ -61,6 +61,14 @@ const Footer = () => {
               </li>
               <li>
                 <button
+                  onClick={() => router.push("/reviews")}
+                  className="hover:text-[#F5A623] transition-all hover:translate-x-1"
+                >
+                  Reviews
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => router.push("/contact")}
                   className="hover:text-[#F5A623] transition-all hover:translate-x-1"
                 >

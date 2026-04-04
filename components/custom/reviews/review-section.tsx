@@ -5,7 +5,7 @@ import { ReviewForm } from "./review-form";
 import { ReviewList } from "./review-list";
 
 interface ReviewSectionProps {
-    itemType: "book" | "service";
+    itemType: "book" | "service" | "event";
     itemId: string;
     title?: string;
 }

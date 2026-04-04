@@ -339,6 +339,14 @@ const Services = () => {
               title="Coaching Reviews"
             />
           </div>
+
+          <div className="border-t border-slate-100 pt-20">
+            <ReviewSection
+              itemType="event"
+              itemId="general-events"
+              title="Event & Program Reviews"
+            />
+          </div>
         </div>
       </div>
 

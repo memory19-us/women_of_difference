@@ -29,7 +29,7 @@ const reviewSchema = z.object({
 type ReviewFormValues = z.infer<typeof reviewSchema>;
 
 interface ReviewFormProps {
-    itemType: "book" | "service";
+    itemType: "book" | "service" | "event";
     itemId: string;
     onSuccess?: () => void;
 }
