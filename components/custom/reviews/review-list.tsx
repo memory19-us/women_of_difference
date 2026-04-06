@@ -27,8 +27,8 @@ export function ReviewList({ reviews, isLoading, onDeleteSuccess }: ReviewListPr
         
         if (pin === null) return; // User cancelled
         
-        if (!pin || pin.length < 4) {
-            toast.error("Invalid PIN format.");
+        if (!pin || !/^\d+$/.test(pin) || pin.length < 4 || pin.length > 6) {
+            toast.error("Invalid PIN format. Must be 4-6 digits.");
             return;
         }
 

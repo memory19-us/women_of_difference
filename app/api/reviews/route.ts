@@ -11,7 +11,7 @@ const reviewSchema = z.object({
     userEmail: z.string().email(),
     rating: z.number().min(1).max(5),
     comment: z.string().min(10),
-    deletePin: z.string().min(4).max(6),
+    deletePin: z.string().regex(/^\d+$/, "PIN must be numbers only").min(4).max(6).transform(Number),
 });
 
 export async function GET(request: Request) {
@@ -66,7 +66,6 @@ export async function POST(request: Request) {
 
         const newReview = await db.insert(reviews).values({
             ...validatedData,
-            createdAt: new Date(),
         }).returning();
 
         // Remove deletePin from response
@@ -96,7 +95,7 @@ export async function DELETE(request: Request) {
             return NextResponse.json({ error: "Review not found" }, { status: 404 });
         }
 
-        if (existingReview[0].deletePin !== deletePin) {
+        if (existingReview[0].deletePin !== Number(deletePin)) {
             return NextResponse.json({ error: "Invalid PIN" }, { status: 401 });
         }
 

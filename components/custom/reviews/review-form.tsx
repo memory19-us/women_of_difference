@@ -23,7 +23,10 @@ const reviewSchema = z.object({
     userEmail: z.string().email("Invalid email address"),
     rating: z.number().min(1, "Please select a rating").max(5),
     comment: z.string().min(10, "Comment must be at least 10 characters"),
-    deletePin: z.string().min(4, "PIN must be at least 4 digits").max(6, "PIN must be max 6 digits"),
+    deletePin: z.string()
+        .min(4, "PIN must be at least 4 digits")
+        .max(6, "PIN must be max 6 digits")
+        .regex(/^\d+$/, "PIN must contain only numbers"),
 });
 
 type ReviewFormValues = z.infer<typeof reviewSchema>;
@@ -118,6 +121,8 @@ export function ReviewForm({ itemType, itemId, onSuccess }: ReviewFormProps) {
                                             type={showPin ? "text" : "password"} 
                                             placeholder="4-6 digits" 
                                             maxLength={6}
+                                            inputMode="numeric"
+                                            pattern="[0-9]*"
                                             className="pr-10"
                                             {...field} 
                                         />
