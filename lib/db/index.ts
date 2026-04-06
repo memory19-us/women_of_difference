@@ -13,19 +13,19 @@ if (!connectionString) {
 }
 
 /**
- * Supabase Pooler (port 6543) requires sslmode=require and usually works best 
- * with rejectUnauthorized: false in serverless environments.
+ * Supabase Pooler (port 6543) works best when we handle SSL in the Pool config.
+ * We strip sslmode=require from the string if present to avoid driver overrides.
  */
-const finalConnectionString = connectionString?.includes('sslmode=') 
-    ? connectionString 
-    : (connectionString ? connectionString + (connectionString.includes('?') ? '&sslmode=require' : '?sslmode=require') : "");
+const finalConnectionString = connectionString?.replace(/[?&]sslmode=require/, "") || "";
 
 const globalForDb = global as unknown as { pool: Pool | undefined };
 
 export const pool = globalForDb.pool ?? new Pool({
     connectionString: finalConnectionString,
-    max: 5, // Optimized for serverless
-    ssl: { rejectUnauthorized: false }
+    max: 10,
+    ssl: { 
+        rejectUnauthorized: false 
+    }
 });
 
 if (process.env.NODE_ENV !== "production") {
