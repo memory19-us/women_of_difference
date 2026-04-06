@@ -2,26 +2,30 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 import * as schema from "./schema";
 
-const connectionString = process.env.DATABASE_URL || "postgresql://postgres:MtXLi4_Gs6gJzXy@db.iuxjfkttdemhoojyarty.supabase.co:5432/postgres";
+const connectionString = process.env.DATABASE_URL;
 
-// Supabase and Vercel often require sslmode=require for stable connections
-const finalConnectionString = connectionString.includes('sslmode=') 
-    ? connectionString 
-    : connectionString + (connectionString.includes('?') ? '&sslmode=require' : '?sslmode=require');
-
-if (!process.env.DATABASE_URL) {
-    console.warn("⚠️ DATABASE_URL is not set in Vercel settings. Using the fallback connection string.");
+// Ensure we have a connection string
+if (!connectionString) {
+    if (process.env.NODE_ENV === "production") {
+        throw new Error("❌ DATABASE_URL is not set in Vercel settings.");
+    }
+    console.warn("⚠️ DATABASE_URL is not set. Local development might fail.");
 }
 
 /**
- * Cache the database connection in development. 
+ * Supabase Pooler (port 6543) requires sslmode=require and usually works best 
+ * with rejectUnauthorized: false in serverless environments.
  */
+const finalConnectionString = connectionString?.includes('sslmode=') 
+    ? connectionString 
+    : (connectionString ? connectionString + (connectionString.includes('?') ? '&sslmode=require' : '?sslmode=require') : "");
+
 const globalForDb = global as unknown as { pool: Pool | undefined };
 
 export const pool = globalForDb.pool ?? new Pool({
     connectionString: finalConnectionString,
-    max: 1, // Crucial for serverless functions to avoid connection exhaustion.
-    ssl: finalConnectionString.includes('sslmode=require') ? { rejectUnauthorized: false } : false
+    max: 5, // Optimized for serverless
+    ssl: { rejectUnauthorized: false }
 });
 
 if (process.env.NODE_ENV !== "production") {
