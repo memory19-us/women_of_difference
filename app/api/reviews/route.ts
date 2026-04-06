@@ -4,6 +4,10 @@ import { eq, and } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
+
 const reviewSchema = z.object({
     itemType: z.enum(["book", "service", "event"]),
     itemId: z.string().min(1),
@@ -53,9 +57,13 @@ export async function GET(request: Request) {
 
         const results = await query;
         return NextResponse.json(results);
-    } catch (error) {
-        console.error("Failed to fetch reviews:", error);
-        return NextResponse.json({ error: "Failed to fetch reviews" }, { status: 500 });
+    } catch (error: any) {
+        console.error("[REVIEWS_GET_ERROR] Failed to fetch reviews:", error);
+        return NextResponse.json({ 
+            error: "Failed to fetch reviews", 
+            details: error?.message || "Unknown error",
+            stack: process.env.NODE_ENV === "development" ? error?.stack : undefined
+        }, { status: 500 });
     }
 }
 
@@ -68,15 +76,25 @@ export async function POST(request: Request) {
             ...validatedData,
         }).returning();
 
+        if (!newReview || newReview.length === 0) {
+            console.error("[REVIEWS_POST_ERROR] Database returned no results after insert.");
+            throw new Error("Database failed to record the review. Please check your Supabase logs.");
+        }
+
         // Remove deletePin from response
         const { deletePin, ...safeResponse } = newReview[0];
         return NextResponse.json(safeResponse);
-    } catch (error) {
+    } catch (error: any) {
         if (error instanceof z.ZodError) {
+            console.warn("[REVIEWS_POST_VALIDATION_ERROR]", error.issues);
             return NextResponse.json({ error: error.issues }, { status: 400 });
         }
-        console.error("Failed to post review:", error);
-        return NextResponse.json({ error: "Failed to post review" }, { status: 500 });
+        console.error("[REVIEWS_POST_ERROR] Failed to post review:", error);
+        return NextResponse.json({ 
+            error: "Failed to post review", 
+            details: error?.message || "Unknown error",
+            stack: process.env.NODE_ENV === "development" ? error?.stack : undefined
+        }, { status: 500 });
     }
 }
 
@@ -102,8 +120,11 @@ export async function DELETE(request: Request) {
         await db.delete(reviews).where(eq(reviews.id, id));
 
         return NextResponse.json({ success: true });
-    } catch (error) {
-        console.error("Failed to delete review:", error);
-        return NextResponse.json({ error: "Failed to delete review" }, { status: 500 });
+    } catch (error: any) {
+        console.error("[REVIEWS_DELETE_ERROR] Failed to delete review:", error);
+        return NextResponse.json({ 
+            error: "Failed to delete review", 
+            details: error?.message || "Unknown error"
+        }, { status: 500 });
     }
 }
