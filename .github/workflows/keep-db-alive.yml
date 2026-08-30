@@ -1,0 +1,22 @@
+name: Keep DB Alive
+
+on:
+  schedule:
+    # Every 6 hours — keeps Supabase free-tier from pausing
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - run: node scripts/keep-alive.mjs
